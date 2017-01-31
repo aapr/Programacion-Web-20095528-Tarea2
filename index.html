@@ -36,6 +36,11 @@
 			newli.innerHTML = newp.innerHTML;
 
 			newul.appendChild(newli);
+
+			if(books[i].alreadyRead == true){
+				newli.style.fontFamily = "verdana";
+			}
+			
 		};
 
 		var liContent = document.getElementsByTagName("li");
