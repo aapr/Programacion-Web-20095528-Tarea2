@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>About Me</title>
+
+	<style>
+		.listitem{ color:red;}
+	</style>
+</head>
+<body>
+	<h1>About Me</h1>
+	<ul>
+		<li>Nickname: <span id="nickname"></span>
+		<li>Favorites:  <span id="favorites"></span>
+		<li>Hometown: <span id="hometown"></span>
+	</ul>
+	<script>
+		
+		document.body.style.fontFamily =  "Arial, sans-serif";
+
+		document.getElementById("nickname").innerHTML = "Sesi";	
+		document.getElementById("favorites").innerHTML = "Pasta";
+		document.getElementById("hometown").innerHTML = "Santo Domingo";
+
+		var myli = document.getElementsByTagName("li");
+		
+		for (var i = 0; i < myli.length; i++) {
+			myli[i].setAttribute("class", "listitem");
+		};
+
+		var mypic = document.createElement("img");
+
+		mypic.setAttribute("src","Avatar.png");
+		mypic.setAttribute("height","200px");
+		mypic.setAttribute("width","200px");
+
+		document.body.appendChild(mypic);
+		
+	</script>
+
+</body>
+</html>

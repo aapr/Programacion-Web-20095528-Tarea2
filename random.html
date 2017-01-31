@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="grid.css" media="screen" title="no title" charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+    </div>
+
+    <script>
+
+    	var rd = document.createElement("div");
+    	rd.setAttribute("class","cell");
+
+    	var containers = document.getElementsByClassName("container");
+    	containers[0].appendChild(rd);
+
+    	var half = setInterval(rColor, 500);
+
+		function rColor() {
+
+			var hex = Math.floor(Math.random() * 0xFFFFFF);
+ 			var rc = "#" + ("000000" + hex.toString(16)).substr(-6); 
+		    rd.style.backgroundColor = rc;
+		}
+
+		// ref :: http://stackoverflow.com/questions/18820733/getting-a-random-background-color-in-javascript
+    </script>
+  </body>
+</html>

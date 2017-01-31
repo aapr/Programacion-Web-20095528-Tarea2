@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<h1>My Book List</h1>
+</head>
+<body>
+	
+	<script>
+		var booksrc = ["book1.jpg", "book2.jpg"];
+		var picHeight = "100px";
+		var picWidth = "100px";
+
+		var books = [{
+						title: 'The Design of EveryDay Things',
+	 					author: 'Don Norman',
+	 					alreadyRead: false
+						},
+						{title: 'The Most Human Human',
+						author: 'Brian Christian',
+						alreadyRead: true
+					}];
+
+		var newul = document.createElement("ul");
+		document.body.appendChild(newul);
+
+		for (var i = 0; i < books.length; i++) {
+
+			var newp = document.createElement("p");
+			
+			var pText = document.createTextNode(books[i].title + " - " + books[i].author + " ");
+
+			newp.appendChild(pText);
+
+			var newli = document.createElement("li");
+			newli.innerHTML = newp.innerHTML;
+
+			newul.appendChild(newli);
+		};
+
+		var liContent = document.getElementsByTagName("li");
+		
+
+		var mypic1 = document.createElement("img");
+		var piclink1 = document.createElement("a");
+		piclink1.setAttribute("href","https://www.amazon.com/Design-Everyday-Things-Donald-Norman/dp/1452654123")
+		mypic1.setAttribute("src",booksrc[0]);
+		mypic1.setAttribute("height",picHeight);
+		mypic1.setAttribute("width",picWidth);
+		piclink1.appendChild(mypic1);
+		liContent[0].appendChild(piclink1);
+
+		var piclink2 = document.createElement("a");
+		var mypic2 = document.createElement("img");
+		piclink2.setAttribute("href","https://www.amazon.com/Most-Human-Artificial-Intelligence-Teaches/dp/0307476707")
+		mypic2.setAttribute("src",booksrc[1]);
+		mypic2.setAttribute("height","100px");
+		mypic2.setAttribute("width","100px");
+		piclink2.appendChild(mypic2);
+		liContent[1].appendChild(piclink2);
+
+
+	
+
+	</script>
+
+</body>
+</html>
